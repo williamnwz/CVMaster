@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilMaster.App", "CivilMaster.App\CivilMaster.App.csproj", "{610E1476-7437-4FCA-BEC7-AC505062438D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{47DDC95C-B1C0-4D9B-B13C-85BFF2F6183A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilMater.Domain", "CivilMater.Domain\CivilMater.Domain.csproj", "{4815A9E4-08A0-4364-BF37-F8C6C5E483D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{EAE94E96-9C98-4FB0-B53B-6F013175054E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilMaster.Application", "CivilMaster.Application\CivilMaster.Application.csproj", "{779CCBA5-7909-4ECF-B50F-3399B2C3B58E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{3996DB86-4AE5-4CF8-B4E7-2A8061F6CD9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivilMaster.DataAccess", "CivilMaster.DataAccess\CivilMaster.DataAccess.csproj", "{914AA9F9-9966-489A-8C0F-9815A2E39688}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{610E1476-7437-4FCA-BEC7-AC505062438D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610E1476-7437-4FCA-BEC7-AC505062438D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610E1476-7437-4FCA-BEC7-AC505062438D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610E1476-7437-4FCA-BEC7-AC505062438D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4815A9E4-08A0-4364-BF37-F8C6C5E483D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4815A9E4-08A0-4364-BF37-F8C6C5E483D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4815A9E4-08A0-4364-BF37-F8C6C5E483D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4815A9E4-08A0-4364-BF37-F8C6C5E483D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779CCBA5-7909-4ECF-B50F-3399B2C3B58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779CCBA5-7909-4ECF-B50F-3399B2C3B58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779CCBA5-7909-4ECF-B50F-3399B2C3B58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779CCBA5-7909-4ECF-B50F-3399B2C3B58E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{914AA9F9-9966-489A-8C0F-9815A2E39688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914AA9F9-9966-489A-8C0F-9815A2E39688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914AA9F9-9966-489A-8C0F-9815A2E39688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914AA9F9-9966-489A-8C0F-9815A2E39688}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4815A9E4-08A0-4364-BF37-F8C6C5E483D3} = {47DDC95C-B1C0-4D9B-B13C-85BFF2F6183A}
+		{779CCBA5-7909-4ECF-B50F-3399B2C3B58E} = {EAE94E96-9C98-4FB0-B53B-6F013175054E}
+		{914AA9F9-9966-489A-8C0F-9815A2E39688} = {3996DB86-4AE5-4CF8-B4E7-2A8061F6CD9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB88C85F-E3D6-4AA5-A0F6-E93F3BBC71D0}
+	EndGlobalSection
+EndGlobal
