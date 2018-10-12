@@ -12,6 +12,7 @@ namespace CivilMaster.DataAccess.Repositories
         public AllocationRepository(CivilMasterContext context) : base(context)
         {
 
+
         }
     }
 }
