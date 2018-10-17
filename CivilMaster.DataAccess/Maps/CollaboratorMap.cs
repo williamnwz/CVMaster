@@ -16,6 +16,7 @@ namespace CivilMaster.DataAccess.Maps
             builder.Property(c => c.Id).HasColumnName("id");
             builder.Property(c => c.Name).HasColumnName("nome");
             builder.Property(c => c.User).HasColumnName("usuario");
+            builder.Property(c => c.Email).HasColumnName("email");
             builder.Property(c => c.Password).HasColumnName("senha");
             builder.Property(a => a.Actived).HasColumnName("ativo");
 

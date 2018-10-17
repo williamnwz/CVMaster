@@ -9,13 +9,10 @@ namespace CivilMater.Domain.CriarObras
     public class CreateWork : ICreateWork
     {
         private IWorkRepository workRepositiory;
-        private IUnityOfWork unityOfWork;
         public CreateWork(IWorkRepository workRepositiory, 
-            IUnityOfWork unityOfWork,
             IAllocateCollaborator allocateCollaborator) {
 
             this.workRepositiory = workRepositiory;
-            this.unityOfWork = unityOfWork;
         }
 
         public void Create(Work work)
@@ -29,7 +26,6 @@ namespace CivilMater.Domain.CriarObras
 
             workRepositiory.Save(work);
 
-            unityOfWork.Commit();
         }
     }
 }

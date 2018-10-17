@@ -15,19 +15,16 @@ namespace CivilMater.Domain.AllocateCollaborators
         private IWorkRepository workRepository;
         private ICreateCollaborator createCollaborator;
         private IAllocationRepository allocationRepository;
-        private IUnityOfWork unityOfWork;
 
 
         public AllocateCollaborator(ICollaboratorRepository collaboratorRepository,
             IWorkRepository workRepository,
             ICreateCollaborator createCollaborator,
-            IAllocationRepository allocationRepository,
-            IUnityOfWork unityOfWork)
+            IAllocationRepository allocationRepository)
         {
             this.collaboratorRepository = collaboratorRepository;
             this.workRepository = workRepository;
             this.allocationRepository = allocationRepository;
-            this.unityOfWork = unityOfWork;
         }
 
 
@@ -41,8 +38,6 @@ namespace CivilMater.Domain.AllocateCollaborators
 
             if (allocation.Work == null)
                 throw new DomainException($@"Não foi informada nenhuma obra para alocar o colaborador!");
-
-
         }
 
         public void Allocate(Allocation allocation)
@@ -61,12 +56,6 @@ namespace CivilMater.Domain.AllocateCollaborators
             else
             {
                 createCollaborator.Create(allocation.Collaborator);
-
-                Collaborator novoColaborador = collaboratorRepository
-                    .Find(x => x.Name.ToUpper().Equals(allocation.Collaborator.Name.ToUpper()))
-                    .FirstOrDefault();
-
-                allocation.Collaborator = novoColaborador;
             }
                 
             Work work = workRepository
@@ -77,8 +66,6 @@ namespace CivilMater.Domain.AllocateCollaborators
                 throw new DomainException($@"Foi informada uma obra inválida!");
 
             allocationRepository.Save(allocation);
-
-            unityOfWork.Commit();
 
         }
 

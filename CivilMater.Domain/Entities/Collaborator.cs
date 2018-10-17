@@ -36,5 +36,11 @@ namespace CivilMater.Domain.Entities
             this.Allocations.Add(allocation);
         }
 
+        public void Enable()
+        {
+            CreateId();
+            Active();
+        }
+
     }
 }

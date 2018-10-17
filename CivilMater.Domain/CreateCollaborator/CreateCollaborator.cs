@@ -10,9 +10,9 @@ namespace CivilMater.Domain.CreateCollaborator
 {
     public class CreateCollaborator : ICreateCollaborator
     {
-        ICollaboratorRepository collaboratorRepository;
+        private ICollaboratorRepository collaboratorRepository;
 
-        public CreateCollaborator(ICollaboratorRepository collaboratorRepository)
+        public CreateCollaborator(ICollaboratorRepository collaboratorRepository, IUnityOfWork unityOfWork)
         {
             this.collaboratorRepository = collaboratorRepository;
         }
@@ -31,9 +31,9 @@ namespace CivilMater.Domain.CreateCollaborator
             if (collaborators.Any(x => x.Actived))
                 throw new DomainException($@"Já existe o colaborador {collaborator.Name}");
 
+            collaborator.Enable();
 
             collaboratorRepository.Save(collaborator);
-
 
         }
     }

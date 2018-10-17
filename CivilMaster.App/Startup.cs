@@ -1,5 +1,9 @@
 using AutoMapper;
+using CivilMaster.App.Models.Collaborator;
 using CivilMaster.App.Models.Work;
+using CivilMaster.Application.Collaborators;
+using CivilMaster.Application.Collaborators.Interfaces;
+using CivilMaster.Application.Decorators;
 using CivilMaster.Application.Works;
 using CivilMaster.Application.Works.Interfaces;
 using CivilMaster.DataAccess;
@@ -42,6 +46,9 @@ namespace CivilMaster.App
                 options.CreateMap<Work, WorkModel>();
                 options.CreateMap<WorkModel, Work>();
 
+                options.CreateMap<CreateCollaboratorRequest, Collaborator>();
+                options.CreateMap<Collaborator, CreateCollaboratorRequest>();
+
             });
 
 
@@ -62,6 +69,11 @@ namespace CivilMaster.App
             services.AddScoped<ICreateCollaborator, CreateCollaborator>();
             services.AddScoped<IAllocateCollaborator, AllocateCollaborator>();
             services.AddScoped<IWorkAppService, WorkAppService>();
+            services.AddScoped<ICollaboratorAppService, CollaboratorAppService>();
+            
+            // decorators
+            services.Decorate<IWorkAppService, WorkAppServiceTransactionDecorator>();
+            services.Decorate<ICollaboratorAppService, CollaboratorAppServiceTransactionDecorator>();
 
 
             // In production, the Angular files will be served from this directory
