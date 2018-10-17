@@ -1,6 +1,9 @@
 using AutoMapper;
+using CivilMaster.App.Models.Allocation;
 using CivilMaster.App.Models.Collaborator;
 using CivilMaster.App.Models.Work;
+using CivilMaster.Application.Allocations;
+using CivilMaster.Application.Allocations.Interfaces;
 using CivilMaster.Application.Collaborators;
 using CivilMaster.Application.Collaborators.Interfaces;
 using CivilMaster.Application.Decorators;
@@ -49,6 +52,9 @@ namespace CivilMaster.App
                 options.CreateMap<CreateCollaboratorRequest, Collaborator>();
                 options.CreateMap<Collaborator, CreateCollaboratorRequest>();
 
+                options.CreateMap<AllocateCollaboratorRequest, Allocation>();
+                options.CreateMap<Allocation, AllocateCollaboratorRequest>();
+
             });
 
 
@@ -70,11 +76,12 @@ namespace CivilMaster.App
             services.AddScoped<IAllocateCollaborator, AllocateCollaborator>();
             services.AddScoped<IWorkAppService, WorkAppService>();
             services.AddScoped<ICollaboratorAppService, CollaboratorAppService>();
-            
+            services.AddScoped<IAllocationAppService, AllocationAppService>();
+
             // decorators
             services.Decorate<IWorkAppService, WorkAppServiceTransactionDecorator>();
             services.Decorate<ICollaboratorAppService, CollaboratorAppServiceTransactionDecorator>();
-
+            services.Decorate<IAllocationAppService, AllocationAppServiceTransactionDecorator>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

@@ -11,6 +11,7 @@ namespace CivilMaster.DataAccess.Maps
     {
         public void Configure(EntityTypeBuilder<Allocation> builder)
         {
+            builder.ToTable("alocacao");
             builder.HasKey(a => a.Id);
             builder.Property(a => a.Id).HasColumnName("id");
             builder.Property(a => a.IdCollaborator).HasColumnName("id_colaborador");

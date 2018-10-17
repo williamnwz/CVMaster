@@ -14,7 +14,7 @@ namespace CivilMater.Domain.Entities
 
         public string IdWork { get; set; }
 
-        public Work Work { get; protected set; }
+        public Work Work { get; set; }
 
         public string IdCollaborator { get; set; }
 

@@ -25,6 +25,7 @@ namespace CivilMater.Domain.AllocateCollaborators
             this.collaboratorRepository = collaboratorRepository;
             this.workRepository = workRepository;
             this.allocationRepository = allocationRepository;
+            this.createCollaborator = createCollaborator;
         }
 
 
@@ -33,8 +34,12 @@ namespace CivilMater.Domain.AllocateCollaborators
             if (allocation == null)
                 throw new DomainException($@"Não foi informada nenhuma alocação!");
 
+            allocation.Collaborator = this.collaboratorRepository.Find(x => x.Id.Equals(allocation.IdCollaborator)).FirstOrDefault();
+
             if (allocation.Collaborator == null)
                 throw new DomainException($@"Não foi informado nenhum colaborador!");
+
+            allocation.Work = this.workRepository.Find(x => x.Id.Equals(allocation.IdWork)).FirstOrDefault();
 
             if (allocation.Work == null)
                 throw new DomainException($@"Não foi informada nenhuma obra para alocar o colaborador!");
@@ -44,29 +49,9 @@ namespace CivilMater.Domain.AllocateCollaborators
         {
             Vaidate(allocation);
 
-            Collaborator collaborator = collaboratorRepository
-                .Find(x => x.Name.ToUpper().Equals(allocation.Collaborator.Name.ToUpper()))
-                .FirstOrDefault();
-
-            // Colaborador ja cadastrado
-            if (collaborator != null)
-            {
-                allocation.Collaborator = collaborator;
-            }
-            else
-            {
-                createCollaborator.Create(allocation.Collaborator);
-            }
-                
-            Work work = workRepository
-                .Find(x => x.Id.Equals(allocation.Work.Id))
-                .FirstOrDefault();
-
-            if (work == null)
-                throw new DomainException($@"Foi informada uma obra inválida!");
+            allocation.Enable();
 
             allocationRepository.Save(allocation);
-
         }
 
 

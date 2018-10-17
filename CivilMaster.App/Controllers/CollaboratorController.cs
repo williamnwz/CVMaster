@@ -7,6 +7,7 @@ using CivilMater.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Collections.Generic;
+
 namespace CivilMaster.App.Controllers
 {
     [Route("api/Collaborator")]
