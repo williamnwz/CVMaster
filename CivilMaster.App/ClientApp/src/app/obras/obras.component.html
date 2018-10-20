@@ -1,47 +1,91 @@
-<div class="panel panel-default">
-  <div class="panel-body">
+      <!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Consulta de Obras
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Obras</a></li>
+    <li class="active">Consulta de Obras</li>
+  </ol>
+</section>
 
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Obras</h3>
+          <div class="box-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <input type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
 
-    <div class="jumbotron">
-      <h1>Lista das obras</h1>
-      <small>Obras Prediais</small>
-    </div>
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-2 "><a class="btn btn-success btn-lg" href="#" role="button">Nova Obra</a></div>
-          <div class="col-md-5 col-md-offset-5"><input type="text" class="form-control" id="buscaObra" placeholder="Pesquisar obra"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-3" *ngFor="let obra of Obras">
-        <div class="thumbnail">
-          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDE5MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY2NjVhNzgzMWUgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjY2NWE3ODMxZSI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI3MC4wNTQ2ODc1IiB5PSIxMDQuNSI+MTkyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="...">
-          <div class="caption">
-            <h3>{{obra.name}}</h3>
-            <p>{{obra.description}}</p>
-            <p>
-              <a href="#" class="btn btn-primary"> <span class="  glyphicon glyphicon-eye-open"></span> Visualizar</a>
-            
-              <a href="#" class="btn btn-danger"> <span class="glyphicon glyphicon-remove"></span> Excluir</a>
-
-            </p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                60% de progresso
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
               </div>
             </div>
-            <span class="label label-warning">Em Andamento</span>
-            <span class="label label-danger">Parado</span>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+          <div class="col-sm-6 col-md-3" *ngFor="let obra of Obras">
 
+
+
+
+
+            <div class="box box-widget widget-user-2">
+              <!-- Add the bg color to the header using any of the bg-* classes -->
+              <div class="widget-user-header bg-yellow">
+                <div class="widget-user-image">
+                  <img class="img-circle" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDE5MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY2NjVhNzgzMWUgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjY2NWE3ODMxZSI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI3MC4wNTQ2ODc1IiB5PSIxMDQuNSI+MTkyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="User Avatar">
+                </div>
+                <!-- /.widget-user-image -->
+                <h3 class="widget-user-username">{{obra.name}}</h3>
+                <h5 class="widget-user-desc">{{obra.description}}</h5>
+              </div>
+              <div class="box-body">
+                <strong><i class="fa fa-book margin-r-5"></i> Endereço</strong>
+                <p class="text-muted">
+                  Rio de janeiro, Copacabana, Av. Princesa Isabel 272
+                </p>
+                <hr>
+                <strong><i class="fa fa-map-marker margin-r-5"></i> Responsável</strong>
+                <p class="text-muted">Alberto Fagundes </p>
+                <hr>
+                <strong><i class="fa fa-map-marker margin-r-5"></i> Contato</strong>
+                <p class="text-muted">(21) 97385-1720 / (21) 2543-5284    </p>
+                <hr>
+                <strong><i class="fa fa-pencil margin-r-5"></i> Atividades</strong>
+                <p>
+                  <span class="label label-danger">Reparos</span>
+                  <span class="label label-success">Limpeza</span>
+                  <span class="label label-info">Melhorias</span>
+                </p>
+                <hr>
+                <strong><i class="fa fa-map-marker margin-r-5"></i> Progressos</strong>
+                <div class="box-body">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                         aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                      60% Estimado
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+                         aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                      50% Realizado
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
-</div>
+
+
+
+</section>
