@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilMaster.Application", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{3996DB86-4AE5-4CF8-B4E7-2A8061F6CD9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivilMaster.DataAccess", "CivilMaster.DataAccess\CivilMaster.DataAccess.csproj", "{914AA9F9-9966-489A-8C0F-9815A2E39688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilMaster.DataAccess", "CivilMaster.DataAccess\CivilMaster.DataAccess.csproj", "{914AA9F9-9966-489A-8C0F-9815A2E39688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -30,8 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\obra\consulta-obras\consulta-obras.component.ts" />
     <None Remove="ClientApp\src\app\models\obra\obra.model.ts" />
-    <None Remove="ClientApp\src\app\obras\obras.component.ts" />
+    <None Remove="ClientApp\src\app\obra\manter-obra\manter-obra.component.ts" />
     <None Remove="ClientApp\src\app\services\obras\obras.service.ts" />
   </ItemGroup>
 
@@ -43,7 +44,8 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\models\obra\obra.model.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\obras\obras.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\obra\consulta-obras\consulta-obras.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\obra\manter-obra\manter-obra.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\obras\obras.service.ts" />
   </ItemGroup>
 

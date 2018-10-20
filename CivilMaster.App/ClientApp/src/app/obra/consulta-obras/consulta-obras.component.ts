@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Obra } from '../models/obra/obra.model';
-import { ObrasService } from '../services/obras/obras.service';
+import { ObrasService } from '../../services/obras/obras.service';
+import { Obra } from '../../models/obra/obra.model';
 
 @Component({
   selector: 'obras',
-  templateUrl: './obras.component.html',
+  templateUrl: './consulta-obras.component.html',
   providers: [ObrasService]
 })
-export class ObrasComponent {
+export class ConsultaObrasComponent {
 
   public Obras: Array<Obra> = [];
 
