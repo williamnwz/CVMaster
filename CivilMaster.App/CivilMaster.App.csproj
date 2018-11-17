@@ -30,10 +30,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\obra\consulta-obras\consulta-obras.component.ts" />
+    <None Remove="ClientApp\src\app\obra\views\consulta-obras\consulta-obras.component.ts" />
     <None Remove="ClientApp\src\app\models\obra\obra.model.ts" />
-    <None Remove="ClientApp\src\app\obra\manter-obra\manter-obra.component.ts" />
+    <None Remove="ClientApp\src\app\obra\views\manter-obra\manter-obra.component.ts" />
+    <None Remove="ClientApp\src\app\obra\obra.module.ts" />
     <None Remove="ClientApp\src\app\services\obras\obras.service.ts" />
+    <None Remove="ClientApp\src\app\shared\basic-components\widget-user\widget-user.component.ts" />
+    <None Remove="ClientApp\src\app\shared\basic-components\container\container.component.ts" />
+    <None Remove="ClientApp\src\app\shared\shared.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,10 +47,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\shared\basic-components\widget-user\widget-user.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\obra\obra.model.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\obra\consulta-obras\consulta-obras.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\obra\manter-obra\manter-obra.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\obra\views\consulta-obras\consulta-obras.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\obra\views\manter-obra\manter-obra.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\obra\obra.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\obras\obras.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\basic-components\container\container.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\shared.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\obra\obra-components\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

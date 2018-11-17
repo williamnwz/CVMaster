@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ObrasService } from '../../services/obras/obras.service';
-import { Obra } from '../../models/obra/obra.model';
+import { ObrasService } from '../../../services/obras/obras.service';
+import { Obra } from '../../../models/obra/obra.model';
+
 
 @Component({
   selector: 'obras',

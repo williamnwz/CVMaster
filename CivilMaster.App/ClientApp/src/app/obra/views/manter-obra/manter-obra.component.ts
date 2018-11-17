@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
-import { ObrasService } from '../../services/obras/obras.service';
-import { Obra } from '../../models/obra/obra.model';
+import { Obra } from '../../../models/obra/obra.model';
+import { ObrasService } from '../../../services/obras/obras.service';
 
 @Component({
   selector: 'manter-obra',
   templateUrl: './manter-obra.component.html',
-  providers: [ObrasService]
+  providers: [ObrasService],
 })
 export class ManterObraComponent {
 
   public Obra: Obra;
 
   constructor(private obrasService: ObrasService) {
-
-    this.obrasService.getObras().subscribe((obras) => {
-      this.Obra = obras[0];
-    });
     
   }
 
