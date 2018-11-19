@@ -1,11 +1,11 @@
 
   <div class="box box-widget widget-user-2">
-    <div class="widget-user-header bg-black">
+    <div class="widget-user-header {{getBGColor()}}">
       <div class="widget-user-image">
-        <img class="img-circle" src="{{ImageSrc}}" >
+        <img class="img-circle" src="{{imageSrc}}" >
       </div>
-      <h3 class="widget-user-username">{{Name}}</h3>
-      <h5 class="widget-user-desc">{{Description}}</h5>
+      <h3 class="widget-user-username">{{name}}</h3>
+      <h5 class="widget-user-desc">{{description}}</h5>
     </div>
     <div class="box-body">
       <ng-content></ng-content>

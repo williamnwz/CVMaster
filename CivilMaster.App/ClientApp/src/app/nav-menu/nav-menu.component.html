@@ -16,7 +16,7 @@
       <li class="header">OBRAS</li>
 
       <li class="active treeview menu-open">
-        <a href="#">
+        <a>
           <i class="fa fa-building"></i> <span>Obras</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -29,6 +29,18 @@
       </li>
 
       <li class="header">COLABORADORES</li>
+      <li class="active treeview menu-open">
+        <a>
+          <i class="fa fa-building"></i> <span>Colaboradores</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#" [routerLink]='["/obras/consulta-obras"]'><i class="fa fa-search"></i> Consultar Colaboradores</a></li>
+          <li><a href="#" [routerLink]='["/obras/nova-obra"]'><i class="fa fa-plus"></i> Cadastrar Colaborador</a></li>
+        </ul>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->

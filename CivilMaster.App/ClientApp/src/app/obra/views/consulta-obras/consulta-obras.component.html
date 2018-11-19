@@ -29,51 +29,49 @@
         <div class="box-body table-responsive no-padding">
           <div *ngFor="let obra of Obras" class="col-sm-6 col-md-3">
 
-            <div class="box box-widget widget-user-2">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-black-gradient">
-                <div class="widget-user-image">
-                  <img class="img-circle" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDE5MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY2NjVhNzgzMWUgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjY2NWE3ODMxZSI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI3MC4wNTQ2ODc1IiB5PSIxMDQuNSI+MTkyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="User Avatar">
-                </div>
-                <h3 class="widget-user-username">{{obra.name}}</h3>
-                <h5 class="widget-user-desc">{{obra.description}}</h5>
-              </div>
+            <widget-user name="{{obra.name}}"
+                         description={{obra.description}}
+                         imageSrc="http://www.imperialpg.in/wp-content/uploads/2017/03/default-building-image.png"
+                         color="green">
+              <strong><i class="fa fa-map-marker margin-r-5"></i> Endereço</strong>
+              <p class="text-muted">
+                Rio de janeiro, Copacabana, Av. Princesa Isabel 272
+              </p>
+              <hr>
+              <strong><i class="fa fa-user margin-r-5"></i> Responsável</strong>
+              <p class="text-muted">Alberto Fagundes </p>
+              <hr>
+              <strong><i class="fa fa-phone margin-r-5"></i> Contato</strong>
+              <p class="text-muted">(21) 97385-1720 / (21) 2543-5284    </p>
+              <hr>
+              <strong><i class="fa fa-tasks margin-r-5"></i> Serviços prestados</strong>
+              <p>
+                <span class="label label-danger">Reparos</span>
+                <span class="label label-success">Limpeza</span>
+                <span class="label label-info">Melhorias</span>
+              </p>
+              <hr>
+              <strong><i class="fa fa-tasks margin-r-5"></i> Progressos</strong>
               <div class="box-body">
-                <strong><i class="fa fa-map-marker margin-r-5"></i> Endereço</strong>
-                <p class="text-muted">
-                  Rio de janeiro, Copacabana, Av. Princesa Isabel 272
-                </p>
-                <hr>
-                <strong><i class="fa fa-user margin-r-5"></i> Responsável</strong>
-                <p class="text-muted">Alberto Fagundes </p>
-                <hr>
-                <strong><i class="fa fa-phone margin-r-5"></i> Contato</strong>
-                <p class="text-muted">(21) 97385-1720 / (21) 2543-5284    </p>
-                <hr>
-                <strong><i class="fa fa-tasks margin-r-5"></i> Serviços prestados</strong>
-                <p>
-                  <span class="label label-danger">Reparos</span>
-                  <span class="label label-success">Limpeza</span>
-                  <span class="label label-info">Melhorias</span>
-                </p>
-                <hr>
-                <strong><i class="fa fa-tasks margin-r-5"></i> Progressos</strong>
-                <div class="box-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
-                         aria-valuemin="0" aria-valuemax="100" style="width:60%">
-                      60% Estimado
-                    </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                       aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    60% Estimado
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
-                         aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                      50% Realizado
-                    </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+                       aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                    50% Realizado
                   </div>
                 </div>
               </div>
-            </div>
+
+            </widget-user>
+
+
+
+            
           </div>
         </div>
       </div>

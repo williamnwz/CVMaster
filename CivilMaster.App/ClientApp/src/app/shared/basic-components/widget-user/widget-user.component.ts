@@ -8,14 +8,24 @@ import { Component, Input } from '@angular/core';
 })
 export class WidgetUserComponent {
 
-  @Input("imageSrc") ImageSrc: string;
-  @Input("name") Name: string;
-  @Input("description") Description: string;
+  @Input("imageSrc") imageSrc: string;
+  @Input("name") name: string;
+  @Input("description") description: string;
+
+  @Input("color") color: string;
+
+  public getBGColor(): string {
+    
+    return "bg-" + this.color;
+  }
 
   constructor() {
-    this.ImageSrc = "";
-    this.Name = "";
-    this.Description = "";
+    this.imageSrc = "";
+    this.name = "";
+    this.description = "";
+    this.description = "";
+    this.color = "black";
   }
+
 
 }
